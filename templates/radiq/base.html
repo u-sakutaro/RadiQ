@@ -1,4 +1,6 @@
 {% load static %}
+{% load crispy_forms_tags %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +37,7 @@
 
                                     <!-- side navigation list item start -->
                                     <li class="side-navigation-list-item">
-                                        <a href="{% url 'radiq:radiq-home'%}" class="active clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
+                                        <a href="{% url 'radiq:radiq-home' %}" class="active clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
                                             <i class="icon float-left">
                                                 <svg viewbox="0 0 24 24">
                                                     <g>
@@ -51,7 +53,7 @@
 
                                     <!-- side navigation list item start -->
                                     <li class="side-navigation-list-item">
-                                        <a href="#" class="clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
+                                        <a href="{% url 'radiq:not-created' %}" class="clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
                                             <i class="icon float-left">
                                                 <svg viewbox="0 0 24 24">
                                                     <g>
@@ -67,7 +69,7 @@
 
                                     <!-- side navigation list item start -->
                                     <li class="side-navigation-list-item">
-                                        <a href="#" class="clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
+                                        <a href="{% url 'radiq:not-created' %}" class="clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
                                             <i class="icon float-left image">
                                                 <img src="{% static 'img/default.png' %}" alt="profile image block" class="rounded-full shadow">
                                             </i>
@@ -78,7 +80,7 @@
 
                                     <!-- side navigation list item start -->
                                     <li class="side-navigation-list-item">
-                                        <a href="#" class="clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
+                                        <a href="{% url 'radiq:not-created' %}" class="clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
                                             <i class="icon float-left">
                                                 <svg viewbox="0 0 24 24">
                                                     <g>

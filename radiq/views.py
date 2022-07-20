@@ -1,4 +1,6 @@
 from django.views.generic import ListView, CreateView
+from django.shortcuts import render, redirect
+
 from .models import Post
 
 
@@ -20,3 +22,9 @@ class PostCreateView(CreateView):
     fields = ['content']
     template_name = 'radiq/post_create.html'
     success_url = '/'
+
+
+
+# 未作成URLをreturnする
+def notCreatedView(request):
+    return render(request, 'radiq/not_created.html')
