@@ -1,0 +1,22 @@
+body {
+    font-family: "Avenir Next";
+}
+
+li {
+list-style: none;
+float: left;
+padding:33px 20px;
+}
+
+
+.header {
+background-color: #0b0d0d;
+color: #fff;
+height: 90px;
+}
+
+.header-logo {
+float: left;
+font-size: 36px;
+padding:20px 40px;
+}
