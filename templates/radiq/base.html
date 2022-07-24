@@ -44,6 +44,12 @@
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a href="#" class="inline-block rounded-full">
+                        <span class="font-bold text-xl">'{{ user }}'としてログイン中</span>
+                    </a>
+                </li>
+                
                 {% else %}
                 <li>
                     <a href="{% url 'user:login' %}" class="inline-block rounded-full">

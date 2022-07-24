@@ -10,7 +10,6 @@ urlpatterns = [
     path('post/<int:pk>/', views.PostDetailView.as_view(), name='post-detail'),
     path('post/<int:pk>/update/', views.PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete/', views.PostDeleteView.as_view(), name='post-delete'),
-
-    # path('<int:pk>', views.ReplyCreateView.as_view(), name='post-reply'),
+    path('post/<int:pk>/comment/', views.CommentCreateView.as_view(), name='post-comment'),
 ]
 

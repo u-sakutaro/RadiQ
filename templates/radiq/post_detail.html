@@ -45,6 +45,67 @@
         </div>
     </div>
     <!-- tweets wrapper end -->
+<br>
+<br>
+
+    {% for comment in post.comment_set.all %}
+            <!-- tweets wrapper start -->
+            <div class="tweets-wrapper">
+                <div class="innner">
+
+                    <!-- tweet start -->
+                    <div
+                        class="tweet cursor-pointer hover:bg-gray-100 transition-3 border border-l-0 border-r-0 border-t-0 p-4 pb-0">
+                        <div class="flex">
+                            <div class="w-auto">
+                                <!-- tweet user img start -->
+                                <div class="tweet-user-img">
+                                    <span class="w-12 rounded-full overflow-hidden mr-2">
+                                        <img
+                                            src="https://pbs.twimg.com/profile_images/1132064597693870080/JlGuTeQt_bigger.png"
+                                            alt="tweet user image">
+                                    </span>
+                                </div>
+                                <!-- tweet user img end -->
+                            </div>
+                            <div class="w-full">
+                                <!-- tweet tweet start -->
+                                <div class="tweet-tweet">
+                                    <!-- tweet info bar start -->
+                                    <div class="tweet-info-bar flex items-center">
+                                        <a href="#" class="hover:underline text-gray-900 font-bold text-base mr-1">{{ comment.author }}</a>
+                                        <span class="inline-block ml-1">·</span>
+                                        <span class="text-gray-600 text-base font-light tracking-wide inline-block ml-1">{{ comment.date_posted }}</span>
+                                    </div>
+                                    <!-- tweet info bar end -->
+                                    <!-- tweet detail start -->
+                                    <div class="tweet-detail">
+                                        <p>{{ comment.comment | linebreaksbr }}</p>
+                                    </div>
+                                    <!-- tweet detail end -->
+                                </div>
+                                <!-- tweet tweet end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tweet end -->
+               </div>
+            </div>
+            <!-- tweets wrapper end -->
+        {% endfor %}
+<!-- 
+    {% for comment in post.comment_set.all %}
+    <p>
+        {{ comment.author }} <br>
+        {{ comment.date_created }} <br>
+        {{ comment.comment | linebreaksbr }} <br>
+    </p>
+    {% endfor %} -->
+    <br>
+    <form action="{% url 'radiq:post-comment' post.id %}">
+       <button type="submit" class="p-3 py-2 twitter-bg text-white rounded-full font-bold tracking-wide ">Comment</button> 
+    </form>
+
     <br>
     <form action="{% url 'radiq:post-update' post.id %}">
        <button type="submit" class="p-3 py-2 twitter-bg text-white rounded-full font-bold tracking-wide ">Update</button> 
