@@ -88,20 +88,6 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
         comment.save()
         return redirect('radiq:post-detail', pk=post_pk)
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['post'] = get_object_or_404(Post, pk=self.kwargs['pk'])
-    #     return context
-
-# def PostDetail(request, pk):
-#   """Article page"""
-#   detail = get_object_or_404(Post, pk=pk)
- 
-#   context = {
-#     "detail": detail,
-#     "comments": Comment.objects.filter(target=detail.id)   #該当記事のリプライだけを渡します。
-#   }
-
 
 # 未作成URLをreturnする
 def notCreatedView(request):
