@@ -37,6 +37,13 @@
                         <span class="font-bold text-xl">LogOut</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{% url 'radiq:post-create' %}">
+                        <div class="radiq-button">
+                            <button class="p-1 twitter-bg text-white w-full font-bold tracking-wide">New RadiQ</button>
+                        </div>
+                    </a>
+                </li>
                 {% else %}
                 <li>
                     <a href="{% url 'user:login' %}" class="inline-block rounded-full">

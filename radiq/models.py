@@ -13,4 +13,15 @@ class Post(models.Model):
 
     def __str__(self):
         return self.content
-    
+
+# 返信のDB作成 
+# class Reply(models.Model):
+#     reply = models.TextField()
+#     author = models.ForeignKey(User, on_delete=models.CASCADE)
+#     target = models.ForeignKey(Post, on_delete=models.CASCADE, verbose_name='回答相手')
+#     date_posted = models.DateTimeField(default=timezone.now)
+#     likes = models.IntegerField(default=0)
+#     dislikes = models.IntegerField(default=0)
+
+#     def __str__(self):
+#         return self.reply[:20]
